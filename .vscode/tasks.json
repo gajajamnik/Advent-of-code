@@ -1,0 +1,31 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Python",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "windows": {
+                "command": "python -i \\\"${file}\\\""
+                },
+            "linux": {
+                "command": "python -i \"${file}\""
+            },
+            "osx": {
+                "command": "python -i \"${file}\""
+            }
+        },
+        {
+            "label": "OCaml",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "C:\\OCaml32\\usr\\local\\bin\\ocaml-env.exe exec -- C:\\OCaml32\\home\\gajaj\\.opam\\4.11.1+mingw32c\\bin\\ocaml.exe -init \"${file}\""
+        }    
+    ]
+}
